@@ -1,0 +1,2 @@
+Using the soem knowledge from the creating of the mock twitter feed functionality I made a to-do list frontend, added functionality 
+of passing element id into functions. This was useful for removing elements. Also made UI more visually appealing.

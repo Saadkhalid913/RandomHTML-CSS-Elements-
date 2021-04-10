@@ -1,0 +1,2 @@
+This is a journalling app i am working on, plan to add some animations into this one and use database to store journal entries. Using elements from previous 2 projects in order to 
+make this one more funtional

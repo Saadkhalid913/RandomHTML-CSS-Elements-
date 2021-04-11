@@ -13,14 +13,29 @@
 
     <div class="main-content">
       <div class="header-box">
-        <h1 class="main-header">Journalr</h1>
-        <button onclick="CardMaker.addpost()">Add Post</button>
+        <h1 class="main-header">&lt;Journalr&gt;</h1>
+        <button id="btn-header-new" onclick="CardMaker.MoveDiv()">
+          New Journal
+        </button>
+        <button id="btn-header-clr" onclick="CardMaker.ClearDisplay()">
+          Clear
+        </button>
+        <!-- <button id="btn-header-save" onclick="CardMaker.SaveEdit()">
+          Save
+        </button> -->
       </div>
 
       <div class="journal-box">
         <h2 class="journal-header" id="main-journal-header"></h2>
         <p class="journal-body" id="main-journal-body"></p>
       </div>
+    </div>
+    <div class="new-post-maker" id="post-maker-div">
+      <textarea
+        placeholder="Write your new journal entry..."
+        id="new-post-text"
+      ></textarea>
+      <button onclick="CardMaker.TextToCard()">Add</button>
     </div>
   </body>
   <script src="script.js"></script>

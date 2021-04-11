@@ -1,4 +1,5 @@
 * {
+  color: rgb(175, 175, 175);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -8,6 +9,12 @@
 body {
   display: flex;
   height: 100vh;
+  padding: 0px;
+}
+
+button {
+  background-color: #414441;
+  outline: none;
 }
 
 .addbar {
@@ -27,16 +34,18 @@ body {
 }
 
 .card {
-  margin-top: 15px;
-  width: 75%;
-  margin: 10px auto;
-  background-color: #cdcaca;
+  width: 85%;
+  margin-left: 15px;
+  margin-top: 5px;
+
+  background-color: #242423;
   border-radius: 5px;
   padding: 15px;
 }
 
-.card .card-remove-button {
-  font-weight: 400;
+.card button {
+  font-weight: 600;
+  padding: 4px;
   width: max(25%, 75px);
   height: max(10% 45px);
   border-radius: 15px;
@@ -46,9 +55,18 @@ body {
   border: none;
 }
 
+.card button:hover {
+  width: max(30%, 75px);
+  height: max(15% 45px);
+}
+
 .sidebar :hover {
-  transform: translate(3%, 0);
+  transform: translate(4%, 0);
   transition-duration: 300ms;
+}
+
+.card:active {
+  background-color: #333533;
 }
 
 .sidebar .card :hover {
@@ -56,24 +74,29 @@ body {
 }
 
 .sidebar {
+  background-color: #333533;
   width: 30%;
   overflow: scroll;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 15px;
+  padding-right: 10px;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
 
 .main-content {
   width: 70%;
-  background-color: #c4c4c4;
+  background-color: #242423;
   height: vh;
   position: relative;
 }
 
 .main-content .main-header {
   margin: 35px;
+  color: #2087d6;
 }
 
 .main-content .header-box h1 {
@@ -85,15 +108,33 @@ body {
   align-items: center;
 }
 
+#btn-header-clr:hover {
+  width: max(22%, 210px);
+}
+#btn-header-new:hover {
+  width: max(22%, 210px);
+}
+#btn-header-new:active {
+  background-color: #50a5e7;
+}
+/* #btn-header-save:hover {
+  width: max(15%, 185px);
+} */
+
 .main-content .header-box button {
+  transition-duration: 150ms;
   width: max(20%, 200px);
   padding: 15px;
-  margin: 15px;
+  margin: 20px;
+  margin-left: 35px;
   border: none;
   border-radius: 30px;
   font-weight: 700;
   font-size: 1.15em;
+  background-color: #2087d6;
+  color: white;
 }
+
 .main-content .journal-box {
   margin: 35px;
   height: 65%;
@@ -103,7 +144,7 @@ body {
 .main-content .journal-box p {
   padding-top: 15px;
   margin-top: 10px;
-  border-top: 1px solid black;
+  border-top: 3px solid #2087d6;
   font-size: 1.85em;
   height: 80%;
   overflow: scroll;
@@ -115,6 +156,43 @@ body {
   margin-bottom: 10px;
   padding-bottom: 15px;
 }
+
 .journal-body {
   overflow-wrap: break-word;
+}
+
+.new-post-maker {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  left: 130%;
+  background-color: #333533;
+  transition-delay: 25ms;
+  transition-duration: 300ms;
+}
+
+.new-post-maker button {
+  width: 35%;
+  height: 8%;
+  margin: 25px;
+  margin-top: 0;
+  border-radius: 30px;
+  align-self: flex-start;
+  border: none;
+  transition-duration: 150ms;
+}
+
+.new-post-maker button:hover {
+  width: 37%;
+}
+
+#new-post-text {
+  position: relative;
+  width: 80%;
+  height: 40%;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 25px;
+  font-size: 1.25em;
+  background-color: #333533;
 }

@@ -1,11 +1,14 @@
-function Post (img_src, description, author, time_posted) {
+function Post (img_src, description = "", author = "unknown", time_posted) {
   if (time_posted === null || time_posted === undefined) 
-    time_posted = new Date().getTime
-
+    time_posted = new Date().getTime()
+ 
   this.img_src = img_src
   this.description = description
   this.author = author 
-  this.description = description
+  this.time_posted = time_posted
+
+  localStorage.setItem(time_posted, JSON.stringify(this))
+
   return this 
 }
 
@@ -14,21 +17,18 @@ function MakePostElement(Post) {
     return
   }
 
-  console.log("MAKING POST")
   let postWrapper = document.createElement("div")
   postWrapper.className = "feed-post"
   
   let imgTag = document.createElement("img")
   imgTag.src = Post.img_src
   
-  console.log("img", imgTag)
   let linkTag = document.createElement("a")
   linkTag.appendChild(imgTag)
+  linkTag.href = "./post.html?id=" + Post["time_posted"]
 
-  console.log("linktag", linkTag)
   
   postWrapper.appendChild(linkTag)
-  console.log("Post", postWrapper)
   return postWrapper
 }
 
@@ -39,12 +39,30 @@ function AddPostToFeed(Post) {
   }
 
   let newHTMLPost = MakePostElement(Post)
-  console.log(newHTMLPost)
   document.getElementById("news-feed").appendChild(newHTMLPost)
   
 }
 
 function DirectAdd (src, desc, author) {
   let post = new Post(src, desc, author)
+  if (!src) 
+    return null
   AddPostToFeed(post)
+}
+
+function AddPost (){
+  let src = document.getElementById("file-path-box").value
+  let desc = document.getElementById("description-box").value
+  let author = document.getElementById("author-box").value
+
+  document.getElementById("author-box").textContent = ""
+  document.getElementById("description-box").textContent = ""
+  document.getElementById("file-path-box").textContent = ""
+  document.getElementById("post-add-header").style.top = "-30%"
+
+  DirectAdd(src, desc, author)
+}
+
+function revealHeader() {
+  document.getElementById("post-add-header").style.top = "0%"
 }

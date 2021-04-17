@@ -9,14 +9,17 @@
   </head>
   <body>
     <div class="container">
-      <div class="navbar"></div>
-      <div class="news-feed-wrapper" id="news-feed">
-        <div class="feed-post">
-          <a href="https://google.ca"
-            ><img src="assets/1200px-VSCO_Seal.svg.png"
-          /></a>
-        </div>
+      <div class="post-add-container" id="post-add-header">
+        <input type="text" placeholder="file path" id="file-path-box" />
+        <input type="text" placeholder="description" id="description-box" />
+        <input type="text" placeholder="author" id="author-box" />
+        <button onclick="AddPost()">Add</button>
       </div>
+      <div class="navbar">
+        <img class="main-logo" src="assets/1200px-VSCO_Seal.svg.png" />
+        <button onclick="revealHeader()"><img src="assets/plus.png" /></button>
+      </div>
+      <div class="news-feed-wrapper" id="news-feed"></div>
     </div>
   </body>
   <script src="script.js"></script>

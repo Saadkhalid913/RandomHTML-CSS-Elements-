@@ -141,7 +141,7 @@ button {
   text-overflow: ellipsis;
 }
 
-.main-content .journal-box p {
+.main-content .journal-box pre {
   padding-top: 15px;
   margin-top: 10px;
   border-top: 3px solid #2087d6;

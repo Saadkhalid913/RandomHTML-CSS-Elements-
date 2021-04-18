@@ -15,7 +15,7 @@ let CardMaker = {
     }
 
     let HeadingTag = document.createElement("h2");
-    let BodyTag = document.createElement("p");
+    let BodyTag = document.createElement("pre");
 
     HeadingTag.appendChild(HeadingText);
     BodyTag.appendChild(BodyText);

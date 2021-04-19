@@ -1,0 +1,66 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .main-logo {
+  height: 100%;
+  padding: 10px;
+  margin-left: 25px;
+}
+
+.navbar button {
+  height: 50%;
+  margin-right: 30px;
+  border: none;
+  background-color: white;
+  outline: none;
+  transition: 100ms;
+}
+.navbar button:hover {
+  transform: rotate(45deg);
+}
+
+.navbar button img {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-box {
+  padding: 25px;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 50px;
+}
+
+.post-box #post-image {
+  border: 1px solid black;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.post-info {
+  margin: 25px;
+}

@@ -26,6 +26,8 @@ function MakePostElement(Post) {
   let linkTag = document.createElement("a")
   linkTag.appendChild(imgTag)
   linkTag.href = "./post.html?id=" + Post["time_posted"]
+  linkTag.target = "_blank";
+  
 
   
   postWrapper.appendChild(linkTag)
@@ -47,20 +49,32 @@ function DirectAdd (src, desc, author) {
   let post = new Post(src, desc, author)
   if (!src) 
     return null
+  console.log(arguments);
   AddPostToFeed(post)
 }
 
 function AddPost (){
-  let src = document.getElementById("file-path-box").value
+  // let src = document.getElementById("file-path-box").value
+
+  const FileBox = document.getElementById("file-box");
+  const reader = new FileReader()
+  let src;
+
   let desc = document.getElementById("description-box").value
   let author = document.getElementById("author-box").value
 
   document.getElementById("author-box").textContent = ""
   document.getElementById("description-box").textContent = ""
-  document.getElementById("file-path-box").textContent = ""
   document.getElementById("post-add-header").style.top = "-30%"
 
-  DirectAdd(src, desc, author)
+  reader.addEventListener("load", function(){
+    src = reader.result
+    DirectAdd(src, desc, author)
+    
+  })
+  
+  reader.readAsDataURL(FileBox.files[0])
+  
 }
 
 function revealHeader() {

@@ -75,18 +75,25 @@
 .navbar button img {
   height: 100%;
 }
+
+#file-box {
+  border-radius: 0px;
+  background-color: black;
+  color: white;
+}
+
 .news-feed-wrapper {
   width: 60%;
   height: 100%;
-  border: 1px solid green;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .news-feed-wrapper .feed-post {
   margin: 25px auto;
-  width: 80%;
+  width: 23%;
 }
 
 .news-feed-wrapper .feed-post img {

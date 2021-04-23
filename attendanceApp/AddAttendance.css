@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main-body {
+  display: flex;
+  background-color: aquamarine;
+  margin: 0 auto;
+  width: 75%;
+  height: 78vh;
+  flex-wrap: wrap;
+}
+
+.main-body textarea {
+  width: 100%;
+  padding: 25px;
+  margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 2px;
+}
+.main-body button {
+  margin: 0 auto;
+  width: 16%;
+  height: 8%;
+}
+
+.main-body input {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: -150px;
+  height: 5%;
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+}

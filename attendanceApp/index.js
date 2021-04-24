@@ -62,12 +62,14 @@ function MakeNewAttendanceFromDisplay() {
  text = text.split(",");
  let StudentNames= []
  for (let i = 0; i < text.length; i++) {
-    let student = new Student(text[i]);
-    StudentNames.push(student); 
- }
-
- let att = new SavedAttendance(title, StudentNames);
- localStorage.setItem("SAVED-" + att.id, JSON.stringify(att))
+   let student = new Student(text[i]);
+   StudentNames.push(student); 
+  }
+  
+  let att = new SavedAttendance(title, StudentNames);
+  localStorage.setItem("SAVED-" + att.id, JSON.stringify(att))
+  document.getElementById("text-area-for-attendance").value = "";
+  document.getElementById("attendance-title-box").value = "";
 }
 
 function render() {
@@ -83,3 +85,10 @@ function render() {
 }
 
 attinstance = render()
+
+function SaveToLocal() {
+  saved_time = Date.now()
+  attinstance.time = saved_time 
+  localStorage.setItem("INSTANCE-" + saved_time, JSON.stringify(attinstance))
+  window.location.replace("index.html")
+}

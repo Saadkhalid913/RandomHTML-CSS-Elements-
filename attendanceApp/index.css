@@ -42,11 +42,7 @@
   width: 70%;
   height: 100%;
   margin: 0 auto;
-  background-color: yellow;
-}
-.main-body .attendance-title {
-  margin: 10px;
-  border: 1px solid black;
+  background-color: rgb(61, 61, 61);
 }
 
 .attendance-item {
@@ -55,18 +51,18 @@
   align-items: center;
   justify-content: space-between;
   margin: 15px;
-  border: 1px solid black;
+  border: 1px solid white;
+  color: white;
 }
 .attendance-item button {
   border-radius: 100px;
   width: 7.5%;
   height: 65%;
-
+  color: black;
   margin: 10px;
   border: none;
   outline: none;
-  background: black;
-  color: white;
+  background: white;
   font-weight: 600;
 }
 
@@ -77,5 +73,7 @@
   letter-spacing: 0.1em;
 }
 
-.current-attendance-list {
+.submit-button {
+  width: 10%;
+  height: 40%;
 }

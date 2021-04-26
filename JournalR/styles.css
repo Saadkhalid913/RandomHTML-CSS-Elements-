@@ -24,40 +24,41 @@ button {
 
 .card .card-heading {
   width: 100%;
-  overflow-wrap: break-word;
   margin-bottom: 8px;
   height: min-content;
 }
 .card .card-body {
+  display: inline-block;
   width: 100%;
-  overflow-wrap: break-word;
+  overflow: hidden;
+  height: 70%;
+  white-space: pre-wrap;
 }
 
 .card {
   width: 85%;
   margin-left: 15px;
   margin-top: 5px;
-
   background-color: #242423;
   border-radius: 5px;
   padding: 15px;
+  height: 30%;
+  padding-top: 5%;
+  padding-bottom: 15%;
 }
 
 .card button {
   font-weight: 600;
-  padding: 4px;
-  width: max(25%, 75px);
-  height: max(10% 45px);
-  border-radius: 15px;
+  margin: 5%;
+  padding: 2px;
+  width: 25%;
+  height: 16%;
   font-size: 1em;
-  margin: 20px;
   margin-left: 0;
   border: none;
 }
-
-.card button:hover {
-  width: max(30%, 75px);
-  height: max(15% 45px);
+.sidebar .card button:hover {
+  transform: scale(1.05, 1.05);
 }
 
 .sidebar :hover {
@@ -117,9 +118,6 @@ button {
 #btn-header-new:active {
   background-color: #50a5e7;
 }
-/* #btn-header-save:hover {
-  width: max(15%, 185px);
-} */
 
 .main-content .header-box button {
   transition-duration: 150ms;
@@ -138,16 +136,16 @@ button {
 .main-content .journal-box {
   margin: 35px;
   height: 65%;
-  text-overflow: ellipsis;
 }
 
 .main-content .journal-box pre {
-  padding-top: 15px;
-  margin-top: 10px;
+  margin-top: 25px;
   border-top: 3px solid #2087d6;
   font-size: 1.85em;
   height: 80%;
   overflow: scroll;
+  white-space: pre-wrap;
+  padding: 15px;
 }
 
 .main-content .journal-box h2 {

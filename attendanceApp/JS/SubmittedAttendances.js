@@ -15,6 +15,7 @@ function createArchiveListElement(ArchiveAttendance) {
   let listLink = document.createElement("a")
   listLink.innerText = `${ArchiveAttendance.title} - ${new Date(ArchiveAttendance.time).toDateString()}`
   listLink.href = "/HTML/View.html?instance=" + ArchiveAttendance.time
+  listLink.target = "_blank"
   listItem.appendChild(listLink)
   return listItem
 }

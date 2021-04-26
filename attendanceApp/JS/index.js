@@ -16,6 +16,7 @@ function Student(name) {
 function MakeAttendanceItems(AttendanceInstanceItem) {
   let ListWrapper = document.createElement("ul");
   ListWrapper.className= "current-attendance-list";
+  ListWrapper.id = "main-list"
 
   for (let i = 0; i < AttendanceInstanceItem.length; i++) {
     let listElement = document.createElement("li");
@@ -31,10 +32,10 @@ function MakeAttendanceItems(AttendanceInstanceItem) {
     presentButton.addEventListener("click", function() {
       AttendanceInstanceItem.MarkHere(this.id, i)
       if (AttendanceInstanceItem.students[i].Present) {
-        this.parentElement.style.backgroundColor = "green"
+        this.parentElement.style.backgroundColor = "#2E7D32"
         return
       }
-      this.parentElement.style.backgroundColor = "red"
+      this.parentElement.style.backgroundColor = "#EF5350"
       
     })
 
@@ -102,7 +103,7 @@ function SaveToLocal() {
 
 document.getElementById("submit-attendance").addEventListener("click" , function() {
   localStorage.setItem("INSTANCE-" + attinstance.time, JSON.stringify(attinstance))
-  window.location.replace("index.html")
+  document.getElementById("main-list").remove()
 })
 
 attinstance = render()

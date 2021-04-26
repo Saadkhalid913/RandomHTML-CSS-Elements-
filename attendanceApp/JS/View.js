@@ -1,8 +1,11 @@
 function CreateArchiveAttendanceItem(Name, isPresent) {
+  let ParaItem = document.createElement("p")
+  ParaItem.style.backgroundColor = isPresent ? "#2E7D32" : "#EF5350"
+  ParaItem.innerText = Name
+
   let listItem = document.createElement("li")
-  listItem.style.backgroundColor = isPresent ? "green" : "red"
-  listItem.innerText = Name
-  return listItem
+  listItem.appendChild(ParaItem)
+  return ParaItem
 }
 
 function render() {
@@ -12,9 +15,8 @@ function render() {
   for (let student of archivedAttendance.students) {
     let isPresent = student.Present;
     let name = student.name;
-    console.log(name)
-    console.log(isPresent)
     document.getElementById("list-body").appendChild(CreateArchiveAttendanceItem(name, isPresent))
   }
+  document.getElementById("heading").innerHTML = `${archivedAttendance.title} - ${new Date(archivedAttendance.time).toDateString()}`
 }
 render()

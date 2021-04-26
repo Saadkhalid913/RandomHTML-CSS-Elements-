@@ -45,17 +45,24 @@
   background-color: rgb(61, 61, 61);
 }
 
+.attendance-body #attendance-title {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
 .attendance-item {
   display: flex;
-  height: 40px;
+  height: 50px;
   align-items: center;
   justify-content: space-between;
   margin: 15px;
-  border: 1px solid white;
+  background-color: #ef5350;
   color: white;
 }
 .attendance-item button {
-  border-radius: 100px;
+  border-radius: 2px;
   width: 7.5%;
   height: 65%;
   color: black;

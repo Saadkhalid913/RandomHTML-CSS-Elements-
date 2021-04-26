@@ -1,0 +1,15 @@
+button {
+  transition-duration: 100ms;
+  color: black;
+  font-weight: 600;
+  outline: 0;
+  border: none;
+}
+
+button:hover {
+  transform: scale(1.05, 1.05);
+}
+button:active {
+  background-color: black;
+  color: white;
+}

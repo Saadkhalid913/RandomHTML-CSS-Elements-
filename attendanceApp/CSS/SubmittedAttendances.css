@@ -6,10 +6,17 @@
   text-decoration: none;
 }
 
+:root {
+  --main: rgb(61, 61, 61);
+  --second: rgb(128, 128, 128);
+  --red: #ef5350;
+  --header: violet;
+}
+
 .navbar {
   width: 100%;
   height: 150px;
-  background-color: blueviolet;
+  background-color: var(--header);
   display: flex;
   align-items: center;
   justify-content: space-around;

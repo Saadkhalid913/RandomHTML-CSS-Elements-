@@ -19,4 +19,8 @@ function render() {
   }
   document.getElementById("heading").innerHTML = `${archivedAttendance.title} - ${new Date(archivedAttendance.time).toDateString()}`
 }
+
+// function CSVexport() {
+
+// }
 render()

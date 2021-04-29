@@ -5,6 +5,12 @@ button {
   outline: 0;
   border: none;
 }
+:root {
+  --main: rgb(61, 61, 61);
+  --second: rgb(128, 128, 128);
+  --red: #ef5350;
+  --header: violet;
+}
 
 button:hover {
   transform: scale(1.05, 1.05);

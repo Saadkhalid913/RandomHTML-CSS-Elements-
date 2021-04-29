@@ -64,6 +64,15 @@ function AttendanceInstance(SavedAttendanceItem) {
 function MakeNewAttendanceFromDisplay() {
  let text =  document.getElementById("text-area-for-attendance").value;
  let title = document.getElementById("attendance-title-box").value;
+
+ if (!title || !text){
+  alert("Please enter a title and at least one student")
+  return;
+ } 
+   
+
+ 
+  
  text = text.split(",");
  let StudentNames= []
  for (let i = 0; i < text.length; i++) {
@@ -81,7 +90,7 @@ function render() {
   let url = new URLSearchParams(window.location.search);
   let Current_attendance_id = url.get("id")
   if (!Current_attendance_id)
-    return;
+    return null 
 
   let att = JSON.parse(localStorage.getItem("SAVED-" + Current_attendance_id))
   let attinstance = new AttendanceInstance(att)
@@ -107,4 +116,7 @@ document.getElementById("submit-attendance").addEventListener("click" , function
 })
 
 attinstance = render()
+if (!attinstance) {
+  document.getElementById("main-attendance-display-body").style.display = "none"
+} 
 

@@ -6,6 +6,8 @@ function display() {
   }
   items.sort((a,b) => b.time - a.time)
 
+
+  console.log(items.length)
   for (let i in items)
     document.getElementById("archive-list-body").appendChild(createArchiveListElement(items[i]))
 }
